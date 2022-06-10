@@ -1,3 +1,103 @@
+# Markdown記法で、TeX/LaTeX構文での数式入力サンプル
+
+$$
+E = mc^2
+$$
+
+## 二次方程式の解
+
 When $a \ne 0$, there are two solutions
 to $(ax^2 + bx + c = 0)$ and they are 
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+$$
+x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+$$
+
+## 平均二乗誤差(損失関数)
+
+$$
+E(w_1, w_2, b) = \frac{1}{4}\sum_{n=0}^3 (t_n - y_n)^2
+$$
+
+## 統計関係
+### 分散
+
+$$
+S_x^2 = \frac{1}{n}\sum_{i=1}^nx_i^2 - \bar{x}^2
+$$
+
+### 変動係数
+
+$$
+\frac{S_x}{\bar{x}}
+$$
+
+### 共分散
+
+$$
+S_{xy} \frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})
+$$
+次の公式もある
+$$
+S_{xy} = \frac{1}{n}\sum_{i=1}^nx_iy_i-\bar{x}\bar{y}
+$$
+
+### 相関係数
+$-1 \le r_{xy} \le 1$ の範囲
+$$
+r_{xy} = \frac{S_{xy}}{S_xS_y}
+$$
+
+### 集合
+
+$$
+P({A}\cup{B}) = P(A) + P(B)
+$$
+$$
+P({A}\cap{B}) = P(A)P(B)
+$$
+
+#### 条件付き確率
+$$
+P(A|B) = \frac{P({A}\cap{B})}{P(B)}
+$$
+#### ベイズの定理
+$$
+P(A|B) = \frac{P(A)P(B|A)}{P(A)}
+$$
+
+### 確率変数Xの期待値と分散の関係
+$$
+V(X) = E(X^2) - \{E(X)\}^2
+$$
+
+### 確率変数X, Yの共分散
+$$
+Cov(X, Y) = E[(X-E(X))(Y-E(Y))]
+$$
+次の公式もある
+$$
+Cov(X, Y) = E(XY)-E(X)E(Y)
+$$
+
+### 確率変数X, Yの相関係数
+$$
+\rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)\sqrt{V(Y)}}}
+$$
+
+## 勾配降下法
+
+$$
+w_1 \leftarrow w_1 - \eta\frac{\partial E(w_1, w_2, b)}{\partial w_1}\\
+w_2 \leftarrow w_2 - \eta\frac{\partial E(w_1, w_2, b)}{\partial w_2}\\
+b \leftarrow b - \eta\frac{\partial E(w_1, w_2, b)}{\partial b}
+$$
+
+## 動的計画法(TD法?)
+
+R(s): 状態ｓでの報酬
+$$
+V(s) = R(s) + \gamma \max_a \sum_{s^{\prime}} T(s^{\prime} | s, a)V(s^{\prime})
+$$
+
+- 価値反復法  
+最初、V(s)を適当に決めて、V0=0とする。
