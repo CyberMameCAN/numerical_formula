@@ -8,6 +8,7 @@ $$
 
 When $a \ne 0$, there are two solutions
 to $(ax^2 + bx + c = 0)$ and they are 
+
 $$
 x = {-b \pm \sqrt{b^2-4ac} \over 2a}
 $$
@@ -84,6 +85,19 @@ $$
 \rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)\sqrt{V(Y)}}}
 $$
 
+## 二項分布
+
+$$
+P(X=x) = \frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}
+$$
+
+## ポアソン分布
+ある出来事が一定時間内に一定の回数($\lambda$)回起こる時の確率分布
+
+$$
+P(X=x) = \frac{e^{-\lambda}・\lambda^x}{x!}\qquad(x=0,1,2,・・・)
+$$
+
 ## 勾配降下法
 
 $$
@@ -95,6 +109,7 @@ $$
 ## 動的計画法(TD法?)
 
 R(s): 状態ｓでの報酬
+
 $$
 V(s) = R(s) + \gamma \max_a \sum_{s^{\prime}} T(s^{\prime} | s, a)V(s^{\prime})
 $$
