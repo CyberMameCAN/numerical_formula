@@ -20,6 +20,13 @@ E(w_1, w_2, b) = \frac{1}{4}\sum_{n=0}^3 (t_n - y_n)^2
 $$
 
 ## 統計関係
+
+xは$\mathbb{R}$に属する
+
+$$
+x \in \mathbb{R}
+$$
+
 ### 分散
 
 $$
@@ -43,7 +50,9 @@ S_{xy} = \frac{1}{n}\sum_{i=1}^nx_iy_i-\bar{x}\bar{y}
 $$
 
 ### 相関係数
+
 $-1 \le r_{xy} \le 1$ の範囲
+
 $$
 r_{xy} = \frac{S_{xy}}{S_xS_y}
 $$
@@ -85,17 +94,23 @@ $$
 \rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)\sqrt{V(Y)}}}
 $$
 
-## 二項分布
+### 二項分布
 
 $$
 P(X=x) = \frac{n!}{x!(n-x)!}p^x(1-p)^{n-x}
 $$
 
-## ポアソン分布
+### ポアソン分布
+離散確率分布  
 ある出来事が一定時間内に一定の回数($\lambda$)回起こる時の確率分布
 
 $$
 P(X=x) = \frac{e^{-\lambda}・\lambda^x}{x!}\qquad(x=0,1,2,・・・)
+$$
+
+#### 参考
+$$
+e = \lim_{x\to0}(1+x)^{\frac{1}{x}}
 $$
 
 ## 勾配降下法
