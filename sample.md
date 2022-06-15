@@ -94,6 +94,21 @@ $$
 \rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)\sqrt{V(Y)}}}
 $$
 
+### 連続型確率密度関数
+
+$$
+P(a\le{X}\le{b}) = \int_a^b f(x)dx
+$$
+#### Xの期待値
+$$
+E(x) = \int_{-\infty}^\infty xf(x)dx
+$$
+
+#### Xの分散
+$$
+V(X) = \int_{-\infty}^\infty (x-E(x))^2f(x)dx
+$$
+
 ### 二項分布
 
 $$
