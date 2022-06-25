@@ -4,6 +4,11 @@ $$
 E = mc^2
 $$
 
+## 導関数の定義
+
+$$
+f'(x) = \lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+$$
 ## 二次方程式の解
 
 When $a \ne 0$, there are two solutions
@@ -11,6 +16,24 @@ to $(ax^2 + bx + c = 0)$ and they are
 
 $$
 x = {-b \pm \sqrt{b^2-4ac} \over 2a}
+$$
+
+## 積の部分
+
+$$
+(f(x)g(x))' = f'(x)g(x) + f(x)g'(x)
+$$
+
+## 商の微分
+
+$$
+y = \frac{f(x)}{g(x)} => \frac{dy}{dx}=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}
+$$
+
+## 指数関数の微分
+
+$$
+y=a^x => \frac{dy}{dx}=a^{x}log_{e}a\qquad(a>0, a\ne1)
 $$
 
 ## 平均二乗誤差(損失関数)
@@ -126,6 +149,14 @@ $$
 #### 参考
 $$
 e = \lim_{x\to0}(1+x)^{\frac{1}{x}}
+$$
+
+## 区間推定
+
+### 母平均の推定（母分散が既知, 95%信頼区間）
+
+$$
+\bar{X} - 1.96\times\frac{\sigma}{\sqrt{n}}\le\mu\le\bar{X} + 1.96\times\frac{\sigma}{\sqrt{n}}
 $$
 
 ## 勾配降下法
