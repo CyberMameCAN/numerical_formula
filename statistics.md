@@ -250,6 +250,12 @@ $$
 \bar{X} - 1.96\times\frac{U}{\sqrt{n}}\le\mu\le\bar{X} + 1.96\times\frac{U}{\sqrt{n}}
 $$
 
+### 母分散の区間推定
+
+$$
+\frac{(n-1)U^2}{\sigma^2}\qquad〜\qquad \chi^2(n-1)
+$$
+
 ## 仮説検定
 
 ### 母平均の仮説検定(母分散が**既知**)
@@ -288,7 +294,7 @@ $$
 Z= \frac{\frac{X}{n}-p}{\sqrt{\frac{p(1-p)}{n}}}\qquad〜\qquad N(0, 1)
 $$
 
-### 母比率の差の検定(大標本)
+### 母比率の**差の**検定(大標本)
 
 ### 母平均の差の検定
 
@@ -304,24 +310,52 @@ $$
 \frac{\bar{X}-\bar{Y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}
 $$
 
+#### 対応なし、2群、母分散未知(大標本)
+
+$$
+\frac{\bar{X}-\bar{Y}}{\sqrt{\frac{U_1^2}{n_1}+\frac{U_2^2}{n_2}}}\qquad〜\qquad N(0, 1)
+$$
+
+#### 対応なし、2群、母分散未知(小標本、等分散)
+
+$$
+\frac{\bar{X}-\bar{Y}}{\sqrt{\hat{U^2}(\frac{1}{n_1}+\frac{1}{n_2}})}\qquad〜\qquad N(0, 1)
+$$
+
+### 等分散の検定
+
+2群が独立という仮定のもと
+
+- $H_0$: $\sigma_1^2 = \sigma_2^2$
+- $H_1$: $\sigma_1^2$ > $\sigma_2^2$, $\sigma_1^2$ < $\sigma_2^2$, $\sigma_1^2 \ne \sigma_2^2$
+- 母集団 N($\mu_1$, $\sigma_1^2$), N($\mu_2$, $\sigma_2^2$)
+- F分布
+
+$$
+F = \frac{U_2^2}{U_1^2}\qquad〜\qquad F(n_2-1, n_1-1)
+$$
 
 ### 適合度検定
-データの分布と特定の理論が合っていないことを示す検定
+実験データの分布と特定の理論が合っていないことを示す検定
 
 $$
 \sum_{i=1}^{n}\frac{(X_i-np_i)^2}{np_i}\qquad〜\qquad \chi^2(k-1)
 $$
 
 ### 独立性の検定
+2要因が独立でないことを示す
 
 $$
-\sum\frac{(実測度数-期待度数)^2}{期待度数}=\sum\frac{(X_i-nP_i)^2}{nP_i}\qquad〜\qquad \chi^2(k-1)
+\sum\frac{(実測度数-期待度数)^2}{期待度数}=\sum\frac{(X_i-nP_i)^2}{nP_i}\qquad〜\qquad \chi^2(df)
 $$
 
+- df = (m – 1) × (n – 1)
 - クロス表（分割表）
 - 観測度数と理論度数(期待度数)を比較する
+- (母比率の差の検定)
 
 ### 分散分析
+基本3群以上の母平均の差の検定
 
 m: 水準の数、N: 標本の数
 
