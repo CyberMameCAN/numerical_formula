@@ -1,7 +1,7 @@
 # 統計関係
 
 ## 慣例
-xは$\mathbb{R}$に属する
+xは $\mathbb{R}$ に属する
 
 $$
 x \in \mathbb{R}
