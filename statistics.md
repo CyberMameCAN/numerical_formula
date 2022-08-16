@@ -31,6 +31,19 @@ $$
 \frac{S_x}{\bar{x}}
 $$
 
+### 標本分散
+
+$$
+S^2 = \frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2=\frac{1}{n}\sum_{i=1}^{n}x_i^2-\bar{x}^2
+$$
+
+### 不偏分散
+
+$$
+U^2 = \frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2
+$$
+ 
+
 ### 共分散
 
 値のばらつきを表す指標  
@@ -86,12 +99,6 @@ $$
 
 ### 期待値と分散
 
-#### 期待値
-
-$$
-S_{x}^2=\frac{1}{n}\sum_{i=1}^{n}x_iy_i-\bar{x}\bar{y}
-$$
-
 #### 離散型確率変数の**期待値**
 
 $$
@@ -140,7 +147,7 @@ $$
 ### **相関係数** (確率変数X, Y)
 
 $$
-\rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)\sqrt{V(Y)}}}
+\rho(S,T) = \frac{Cov(X,Y)}{\sqrt{V(X)}\sqrt{V(Y)}}
 $$
 
 ### 連続型確率密度関数
@@ -156,19 +163,6 @@ $$
 #### Xの分散
 $$
 V(X) = \int_{-\infty}^\infty (x-E(x))^2f(x)dx
-$$
-
-### 不偏分散
-
-$$
-U^2 = \frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2
-$$
- 
-
-### 標本分散
-
-$$
-S^2 = \frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2
 $$
 
 ## 確率分布
@@ -236,9 +230,15 @@ $$
 \lim_{n\to∞}P(|\bar{X}-\mu|>\epsilon)=0
 $$
 
+#### チェビシェフの不等式
+
+$$
+P(|\bar{X}-E(X)|>\epsilon)\le\frac{V(X)}{\epsilon^2}
+$$
+
 ### 標準偏差
 
-$\sigma$:母分散、n:標本数
+$\sigma^2$:母分散、n:標本数
 
 $$
 \frac{\sigma}{\sqrt{n}}
@@ -306,7 +306,7 @@ $$
 ### 母比率の検定(大標本)
 
 - 標本比率 $\frac{X}{n}$
-- $n\to∞$の時、$N(p,\frac{p(1-p)}{n})に従う$
+- $n\to∞$の時、 $N(p,\frac{p(1-p)}{n})に従う$
 
 $$
 Z= \frac{\frac{X}{n}-p}{\sqrt{\frac{p(1-p)}{n}}}\qquad〜\qquad N(0, 1)
@@ -352,7 +352,7 @@ $$
 
 - $H_0$: $\sigma_1^2 = \sigma_2^2$
 - $H_1$: $\sigma_1^2$ > $\sigma_2^2$, $\sigma_1^2$ < $\sigma_2^2$, $\sigma_1^2 \ne \sigma_2^2$
-- 母集団 N($\mu_1$, $\sigma_1^2$), N($\mu_2$, $\sigma_2^2$)
+- 母集団 $N(\mu_1, \sigma_1^2), N(\mu_2, \sigma_2^2)$
 - F分布
 
 $$
